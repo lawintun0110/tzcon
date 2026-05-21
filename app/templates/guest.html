@@ -7,21 +7,38 @@ TZ Construction
 {% block content %}
 
 <!-- Navbar -->
-<nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
+<nav class="bg-white text-red-600 sticky top-0 z-50 shadow-md border-b border-slate-200">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <!-- Future DB Dynamic -->
+        <!-- Brand / Logo -->
         <div class="flex items-center space-x-2 font-black tracking-wider text-lg uppercase">
-            <span class="text-amber-500">▲</span>
-            <span>TZ Construction</span>
+
+            <img 
+                src="{{ url_for('static', filename='img/logo.png') }}" 
+                alt="TZ Logo"
+                class="w-10 h-10 sm:w-20 sm:h-20 object-contain"
+            >
+
+
+            <img 
+                src="{{ url_for('static', filename='img/tz-text.png') }}" 
+                alt="TZ Logo"
+                class="w-20 h-10 sm:w-40 sm:h-20 object-contain"
+            >
+
+
+        
+            
         </div>
 
-        <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-wider text-slate-300">
-            <a href="#home" class="hover:text-amber-500 transition-colors">ပင်မစာမျက်နှာ</a>
-            <a href="#services" class="hover:text-amber-500 transition-colors">ဝန်ဆောင်မှုများ</a>
-            <a href="#projects" class="hover:text-amber-500 transition-colors">စီမံကိန်းများ</a>
-            <a href="#contact" class="hover:text-amber-500 transition-colors">ဆက်သွယ်ရန်</a>
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-wider text-red-500">
+            <a href="#home" class="hover:text-red-700 transition-colors">ပင်မစာမျက်နှာ</a>
+            <a href="#services" class="hover:text-red-700 transition-colors">ဝန်ဆောင်မှုများ</a>
+            <a href="#projects" class="hover:text-red-700 transition-colors">စီမံကိန်းများ</a>
+            <a href="#contact" class="hover:text-red-700 transition-colors">ဆက်သွယ်ရန်</a>
         </div>
+
     </div>
 </nav>
 
@@ -38,44 +55,207 @@ TZ Construction
             စံချိန်စံညွှန်းမီ လုပ်ငန်းခွင်
         </span>
 
-        <h1 class="text-2xl md:text-4xl font-bold tracking-tight mt-3 max-w-2xl leading-snug text-slate-100">
-            အင်ဂျင်နီယာအတတ်ပညာ တိကျမှန်ကန်မှုနှင့် ရေရှည်ခိုင်ခံ့သော လက်ရာများ
+        <h1 class="text-2xl md:text-4xl font-bold tracking-tight mt-3 max-w-3xl leading-snug text-slate-100">
+            အင်ဂျင်နီယာအတတ်ပညာ တိကျမှန်ကန်မှုနှင့် ခေတ်မီ ဆန်းသစ်သော လက်ရာများ
         </h1>
 
         <div class="mt-6">
+            <a href="#profile"
+               class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-3 text-xs uppercase tracking-wider inline-block shadow-lg transition-colors">
+                Business Profile
+            </a>
+        
+
+        
             <a href="#projects"
                class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold px-6 py-3 text-xs uppercase tracking-wider inline-block shadow-lg transition-colors">
-                လုပ်ငန်းများကြည့်ရှုရန်
+                Projects Gallery
             </a>
         </div>
 
     </div>
 </section>
 
+<!-- Profile Section -->
+<section id="profile" class="py-20 bg-slate-50 border-y border-slate-200">
 
-<!-- Services -->
-<section id="services" class="py-20 max-w-6xl mx-auto px-6">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
 
-    <h2 class="text-xl font-bold tracking-tight uppercase border-b-2 border-amber-500 pb-2 w-fit">
-        ဝန်ဆောင်မှုများ
-    </h2>
+        <!-- Text Content -->
+        <div>
 
-    <div class="grid md:grid-cols-3 gap-6 mt-10">
+            <h2 class="text-xl font-bold uppercase border-b-2 border-amber-500 pb-2 w-fit mb-6">
+                
+            </h2>
 
-        <!-- Future Jinja Loop -->
-        <!-- {% for service in services %} -->
-
-        <div class="bg-white p-6 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-            <div class="text-3xl mb-3">🏢</div>
-            <h3 class="text-md font-bold mb-2 text-slate-800">
-                အထပ်မြင့် အဆောက်အဦးများ
+            <h3 class="text-2xl font-bold text-slate-800 mb-4">
+                Our Business Profile 
             </h3>
-            <p class="text-slate-600 text-xs leading-relaxed">
-                နိုင်ငံတကာ စံချိန်စံညွှန်းများနှင့်အညီ စိတ်ချရသော စီးပွားရေးလုပ်ငန်းသုံး အဆောက်အဦးများ တည်ဆောက်ခြင်း။
+
+            <p class="text-slate-600 leading-relaxed text-sm mb-4">
+               ကျွန်ုပ်တို့ TZ Construction သည် အရည်အသွေးမြင့် ဆောက်လုပ်ရေးလုပ်ငန်းများကို ယုံကြည်စိတ်ချစွာ တည်ဆောက်ပေးနေသော
+               မန္တလေးမြို့အခြေစိုက် အင်ဂျင်နီယာဝန်ဆောင်မှုလုပ်ငန်းဖြစ်သည်။
             </p>
+
+            <p class="text-slate-600 leading-relaxed text-sm mb-4">
+                အကြီးတန်းလိုင်စင်ရ အင်ဂျင်နီယာ ဦးသိန်းဇော်ဦးစီးသော TZ Construction သည်မန္တလေးမြို့၏ သက်တမ်းရင့် ဆောက်လုပ်ရေးလုပ်ငန်းတစ်ခုဖြစ်ပြီး လိုင်စင်အမှတ်မှာ အကြီးတန်း(၀၄၄)/RSE-0475 ဖြစ်သည်။
+            </p>
+
+            <p class="text-slate-600 leading-relaxed text-sm mb-6">
+                ၁၉၉၂ ခုနှစ်မှစတင်၍ ယခုလက်ရှိ ၂၀၂၆ခုနှစ်ထိ နှစ်ပေါင်း (၃၂) နှစ်တာကာလအတွင်း
+                လူနေအိမ်၊ စက်မှု၊ စီးပွားရေးနှင့် သာသနိကအပါအဝင် အဆောက်အဦး စီမံကိန်း(၁၀၀၀)ကျော်ကို
+                စနစ်တကျနှင့် အရည်အသွေးမြင့်စွာ တည်ဆောက်ခဲ့သည်။
+            </p>
+
+            
+            <p class="text-slate-600 leading-relaxed text-sm mb-6">
+                TZ construction တွင် ပညာရှင်လုပ်သားဦးရေ အင်ဂျင်နီယာ ၄၀ ဝန်းကျင်ခန့် နှင့် အခြေခံလုပ်သားဦးရေ ၅၀၀ကျော်ကို စဥ်ဆက်မပြတ် အလုပ်အကိုင်များ ဖန်တီးပေးထားပြီး မိဘပြည်သူများမှ ယုံကြည်စွာ အပ်နှံသော အဆောက်အဦး စီမံကိန်းများကို တိကျမှန်ကန်စွာ ဝန်ဆောင်မှုပေးလျက်ရှိပါသည်။
+            </p>
+
+            
+            
+
+
+            <div class="flex gap-1">
+               
+                 <div class="bg-white px-4 py-3 border shadow-sm">
+                    <p class="text-amber-500 font-bold text-lg">RSE</p>
+                    <p class="text-xs text-slate-600">လိုင်စင်ရ</p>
+                </div>
+
+                <div class="bg-white px-4 py-3 border shadow-sm">
+                    <p class="text-amber-500 font-bold text-lg">32+</p>
+                    <p class="text-xs text-slate-600">နှစ်အတွေ့အကြုံ</p>
+                </div>
+
+               
+
+                <div class="bg-white px-4 py-3 border shadow-sm">
+                    <p class="text-amber-500 font-bold text-lg">1000+</p>
+                    <p class="text-xs text-slate-600">စီမံကိန်း</p>
+                </div>
+
+                <div class="bg-white px-4 py-3 border shadow-sm">
+                    <p class="text-amber-500 font-bold text-lg">40±</p>
+                    <p class="text-xs text-slate-600">ပညာရှင်လုပ်သား</p>
+                </div>
+
+                <div class="bg-white px-4 py-3 border shadow-sm">
+                    <p class="text-amber-500 font-bold text-lg">500+</p>
+                    <p class="text-xs text-slate-600">အခြေခံလုပ်သား</p>
+                </div>
+            </div>
+
         </div>
 
-        <!-- {% endfor %} -->
+        <!-- Visual / Image Placeholder -->
+        <!-- Visual / Image Slideshow -->
+<div class="relative h-80 overflow-hidden border bg-slate-100">
+
+
+
+    <!-- Slides -->
+
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/phases-of-construction.webp"
+             class="w-full h-full object-cover" />
+    </div>
+
+    <div class="slide absolute inset-0 opacity-100 transition-opacity duration-700">
+        <img src="https://cpe.ucdavis.edu/sites/g/files/dgvnsk15476/files/styles/sf_hero_banner_large/public/media/images/const-hero.jpg?h=bf654dbc&itok=1iECOUHR"
+             class="w-full h-full object-cover" />
+    </div>
+
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="https://t4.ftcdn.net/jpg/00/68/63/23/240_F_68632352_kmHLwFc2rQLmnKqn6gM0bhOPqxRTx8sY.jpg"
+             class="w-full h-full object-cover" />
+    </div>
+
+    
+
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+             class="w-full h-full object-cover" />
+    </div>
+
+    
+
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="https://thearchitectsdiary.com/wp-content/uploads/2025/03/bank-design-1-1024x682.jpg"
+             class="w-full h-full object-cover" />
+    </div>
+
+    <div class="slide absolute inset-0 opacity-0 transition-opacity duration-700">
+        <img src="https://itasmdy.com/wp-content/uploads/2024/07/elv-solutions-2.png"
+             class="w-full h-full object-cover" />
+    </div>
+
+</div>
+
+    </div>
+
+</section>
+<!-- Services -->
+<!-- Services -->
+<section id="services" class="py-20 bg-slate-50">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+        <h2 class="text-2xl font-bold text-slate-900">
+         ရရှိနိုင်သော ဝန်ဆောင်မှုများ
+        </h2>
+
+        <div class="w-50 h-1 bg-amber-500 mt-3 rounded"></div>
+
+        <!-- Horizontal Scroll -->
+        <div class="mt-12 flex gap-6 overflow-x-auto pb-4 scroll-smooth">
+<!-- NEW -->
+            <div onclick="openModal('📐','ဒီဇိုင်းနှင့် အကြံပေး','အဆောက်အဦး ဒီဇိုင်းရေးဆွဲခြင်းနှင့် အကြံပေးဝန်ဆောင်မှု။')"
+                class="min-w-[280px] bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition cursor-pointer">
+
+                <div class="text-5xl mb-5">📐</div>
+                <h3 class="text-xl font-bold mb-3">ဒီဇိုင်းနှင့် အကြံပေး</h3>
+                <p class="text-slate-500 text-sm">Design & Consulting Services.</p>
+            </div>
+            <!-- Card -->
+            <div onclick="openModal('🏢','အထပ်မြင့် အဆောက်အဦးများ','စီးပွားရေးအဆောက်အဦးများ တည်ဆောက်ခြင်း။')"
+                class="min-w-[280px] bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition cursor-pointer">
+
+                <div class="text-5xl mb-5">🏢</div>
+                <h3 class="text-xl font-bold mb-3">အထပ်မြင့် အဆောက်အဦးများ</h3>
+                <p class="text-slate-500 text-sm">စီးပွားရေးအဆောက်အဦးများ တည်ဆောက်ခြင်း။</p>
+            </div>
+
+            <!-- Card -->
+            <div onclick="openModal('🏭','စက်ရုံ အလုပ်ရုံများ','Industrial နှင့် Factory များ တည်ဆောက်ခြင်း။')"
+                class="min-w-[280px] bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition cursor-pointer">
+
+                <div class="text-5xl mb-5">🏭</div>
+                <h3 class="text-xl font-bold mb-3">စက်ရုံ အလုပ်ရုံများ</h3>
+                <p class="text-slate-500 text-sm">Industrial နှင့် Factory များ တည်ဆောက်ခြင်း။</p>
+            </div>
+
+            <!-- Card -->
+            <div onclick="openModal('🏠','အိမ်ရာစီမံကိန်းများ','Residential Project များ တည်ဆောက်ခြင်း။')"
+                class="min-w-[280px] bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition cursor-pointer">
+
+                <div class="text-5xl mb-5">🏠</div>
+                <h3 class="text-xl font-bold mb-3">အိမ်ရာစီမံကိန်းများ</h3>
+                <p class="text-slate-500 text-sm">Residential Project များ တည်ဆောက်ခြင်း။</p>
+            </div>
+
+            <!-- NEW -->
+            <div onclick="openModal('🛕','သာသနိက အဆောက်အဦးများ','ဘုရားကျောင်းများနှင့် သာသနာဆိုင်ရာ အဆောက်အဦးများ တည်ဆောက်ခြင်း။')"
+                class="min-w-[280px] bg-white p-8 rounded-3xl shadow-sm hover:shadow-2xl transition cursor-pointer">
+
+                <div class="text-5xl mb-5">🛕</div>
+                <h3 class="text-xl font-bold mb-3">သာသနိက အဆောက်အဦးများ</h3>
+                <p class="text-slate-500 text-sm">ဘုရားကျောင်းများ တည်ဆောက်ခြင်း။</p>
+            </div>
+
+            
+
+        </div>
 
     </div>
 </section>
@@ -89,89 +269,192 @@ TZ Construction
         <div class="flex justify-between items-end border-b border-slate-800 pb-4 mb-8">
 
             <h2 class="text-xl font-bold tracking-tight">
-                ဂုဏ်ယူရသော စီမံကိန်းများ
+                အထင်ကရ စီမံကိန်းများ
             </h2>
-
-            <div class="flex space-x-2 text-[10px] font-bold uppercase tracking-wider">
-                <button class="bg-amber-500 text-slate-900 px-3 py-1.5">အားလုံး</button>
-                <button class="bg-slate-800 text-slate-400 px-3 py-1.5 hover:bg-slate-700 transition-colors">လုပ်ဆောင်ဆဲ</button>
-                <button class="bg-slate-800 text-slate-400 px-3 py-1.5 hover:bg-slate-700 transition-colors">ပြီးစီး</button>
-            </div>
 
         </div>
 
+        <!-- Grid -->
+        <div id="projectGrid" class="grid md:grid-cols-3 gap-6">
 
-        <div id="grid" class="grid md:grid-cols-3 gap-6">
-
-            <!-- Future Jinja Loop -->
-            <!-- {% for project in projects %} -->
-
-            <div class="bg-slate-800 border border-slate-700 overflow-hidden group">
-
-                <div class="h-48 overflow-hidden relative">
-                    <img
-                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80"
-                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    >
-                </div>
-
+            <!-- 1 -->
+            <div class="project-card bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img  src="{{ url_for('static', filename='img/highbuild.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
                 <div class="p-4">
-                    <span class="text-amber-500 text-[10px] font-bold tracking-widest uppercase">
-                        စီးပွားရေးလုပ်ငန်းသုံး
-                    </span>
-
-                    <h3 class="text-sm font-bold tracking-tight text-white mt-1">
-                        The Quantum Tower
-                    </h3>
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">အထပ်မြင့်</span>
+                    <h3 class="text-sm font-bold mt-1">High Building</h3>
                 </div>
-
             </div>
 
-            <!-- {% endfor %} -->
+            <div class="project-card bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img  src="{{ url_for('static', filename='img/high.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">အထပ်မြင့်များ</span>
+                    <h3 class="text-sm font-bold mt-1">High Buildings</h3>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="project-card bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img src="{{ url_for('static', filename='img/bank.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">ဘဏ်</span>
+                    <h3 class="text-sm font-bold mt-1">AWB BANK</h3>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            
+
+            <!-- Hidden extra cards (4–10) -->
+            
+            <div class="project-extra hidden bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img src="{{ url_for('static', filename='img/industrials.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">စက်မှု</span>
+                    <h3 class="text-sm font-bold mt-1">Industrial Hub</h3>
+                </div>
+            </div>
+
+            <div class="project-extra hidden bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img src="{{ url_for('static', filename='img/school.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">စာသင်ကျောင်းများ</span>
+                    <h3 class="text-sm font-bold mt-1">Partnership with UNICEF and World Vision</h3>
+                </div>
+            </div>
+
+            <div class="project-extra hidden bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img src="{{ url_for('static', filename='img/collection.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">လူနေအိမ်ရာများနှင့် ဟိုတယ်များ</span>
+                    <h3 class="text-sm font-bold mt-1">Residentials and Hotels</h3>
+                </div>
+            </div>
+            <div class="project-extra hidden bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img src="{{ url_for('static', filename='img/pagoda.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">သာသနိက</span>
+                    <h3 class="text-sm font-bold mt-1">Library Building in Masoeyein Monestry</h3>
+                </div>
+            </div>
+
+            <div class="project-extra hidden bg-slate-800 border border-slate-700 overflow-hidden group">
+                <img src="{{ url_for('static', filename='img/temple.jpg') }}"
+                    class="h-48 w-full object-cover group-hover:scale-105 transition">
+                <div class="p-4">
+                    <span class="text-amber-500 text-[10px] font-bold uppercase">သာသနိက</span>
+                    <h3 class="text-sm font-bold mt-1">Jin Taw Yan Buddhist Temple (So called Yunnanese Temple) in Mandalay</h3>
+                </div>
+            </div>
+
+
+            <!-- Add more up to 10 similarly -->
+
+        </div>
+
+        <!-- Continue Button -->
+        <div class="text-center mt-10">
+
+            <button onclick="showAllProjects()"
+                class="px-6 py-3 bg-amber-500 text-black font-semibold rounded-full hover:bg-amber-400 transition">
+
+                ဆက်လက်ကြည့်ရှုရန်
+
+            </button>
 
         </div>
 
     </div>
 </section>
 
+<!-- Script -->
+<script>
+    function showAllProjects() {
+
+        document.querySelectorAll('.project-extra').forEach(el => {
+            el.classList.remove('hidden');
+        });
+
+        // hide button after expand
+        event.target.style.display = "none";
+    }
+</script>
 
 <!-- Contact -->
-<section id="contact" class="py-20 max-w-2xl mx-auto px-6">
+<section id="contact" class="py-20 bg-slate-50">
 
-    <div class="bg-white border-t-2 border-amber-500 p-8 shadow-md">
+    <div class="max-w-4xl mx-auto px-6">
 
-        <h3 class="text-lg font-bold tracking-tight mb-4">
-            ဆောက်လုပ်ရေး လုပ်ငန်းအတွက် ဆွေးနွေးရန်
-        </h3>
+        <div class="bg-white border-t-2 border-amber-500 p-10 shadow-md rounded-2xl">
 
-        <form class="space-y-4">
+            <h3 class="text-xl font-bold mb-8 text-slate-900">
+                ဆက်သွယ်ရန် အချက်အလက်များ
+            </h3>
 
-            <div class="grid md:grid-cols-2 gap-4">
-                <input type="text" placeholder="ကုမ္ပဏီ သို့မဟုတ် အဖွဲ့အစည်းအမည်"
-                    class="w-full border border-slate-300 px-3 py-2 text-xs focus:outline-none focus:border-amber-500 transition-colors">
+            <div class="grid md:grid-cols-3 gap-8">
 
-                <input type="email" placeholder="အီးမေးလ် လိပ်စာ"
-                    class="w-full border border-slate-300 px-3 py-2 text-xs focus:outline-none focus:border-amber-500 transition-colors">
+                <!-- Address -->
+                <div class="space-y-2">
+                    <div class="text-3xl">📍</div>
+                    <h4 class="font-bold text-slate-800">လိပ်စာ</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        No.(344), Sein Ban Minthar Quarter,<br>
+                        Mahasi Road,<br>
+                        Mandalay, Myanmar
+                    </p>
+                </div>
+
+                <!-- Phone -->
+                <div class="space-y-2">
+                    <div class="text-3xl">📞</div>
+                    <h4 class="font-bold text-slate-800">ဖုန်း</h4>
+                    <p class="text-sm text-slate-600">
+                        02-34560<br>
+                        02-63663<br>
+                        09-2001600<br>
+                        09-9060123
+                    </p>
+                </div>
+
+                <!-- Email -->
+                <div class="space-y-2">
+                    <div class="text-3xl">✉️</div>
+                    <h4 class="font-bold text-slate-800">အီးမေးလ်</h4>
+                    <p class="text-sm text-slate-600">
+                        utheinzaw.mdy.mm@gmail.com<br>
+                        tz-group@mandalay.net.mm
+                    </p>
+                </div>
+
             </div>
 
-            <textarea rows="3"
-                placeholder="လုပ်ငန်းပမာဏနှင့် အသေးစိတ်အချက်အလက်များ..."
-                class="w-full border border-slate-300 px-3 py-2 text-xs focus:outline-none focus:border-amber-500 transition-colors"></textarea>
+            <!-- Bottom Note -->
+            <div class="mt-10 pt-6 border-t border-slate-200 text-center">
 
-            <button type="submit"
-                class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 uppercase tracking-widest text-xs transition-colors">
-                ပေးပို့ရန်
-            </button>
+                <p class="text-sm text-slate-500">
+                    ဆောက်လုပ်ရေးလုပ်ငန်းများအတွက် အချိန်မရွေး ဆက်သွယ်နိုင်ပါသည်
+                </p>
 
-        </form>
+            </div>
+
+        </div>
 
     </div>
+
 </section>
 
 
 <!-- Footer -->
 <footer class="bg-slate-950 text-slate-600 py-6 text-center text-[10px] border-t border-slate-900">
-    <p>&copy; 2026 TZ Construction. Powered by Flask + Tailwind + HTMX</p>
+    <p>&copy; 2026 TZ Construction. Dveloper @U La Win Tun, +959778352457</p>
 </footer>
 
 {% endblock %}
